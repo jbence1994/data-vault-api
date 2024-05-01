@@ -1,0 +1,14 @@
+mutation {
+    createProfile(
+        input: {firstName: "", middleName: "", lastName: "", gender: 0, phone: "", email: "", photo: ""}
+    ) {
+        id
+        firstName
+        middleName
+        lastName
+        gender
+        phone
+        email
+        photo
+    }
+}

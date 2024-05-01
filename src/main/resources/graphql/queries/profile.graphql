@@ -1,0 +1,12 @@
+query {
+    profile(id: "") {
+        id
+        firstName
+        middleName
+        lastName
+        gender
+        phone
+        email
+        photo
+    }
+}

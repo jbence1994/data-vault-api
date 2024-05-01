@@ -1,8 +1,35 @@
 type Query {
     messages: [Message]
+    profiles: [Profile]
+    profile(id: String!): Profile
+}
+
+type Mutation {
+    createProfile(input: ProfileInput!): Profile!
 }
 
 type Message {
     id: String!
     text: String!
+}
+
+type Profile {
+    id: String!
+    firstName: String!
+    middleName: String
+    lastName: String!
+    gender: Int!
+    phone: String
+    email: String
+    photo: String
+}
+
+input ProfileInput {
+    firstName: String!
+    middleName: String
+    lastName: String!
+    gender: Int!
+    phone: String
+    email: String
+    photo: String
 }
