@@ -1,0 +1,12 @@
+query {
+    profiles {
+        id
+        firstName
+        middleName
+        lastName
+        gender
+        phone
+        email
+        photo
+    }
+}
