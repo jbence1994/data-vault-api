@@ -44,7 +44,7 @@ class ProfileRepository {
             gender = newProfile.gender,
             photo = newProfile.photo,
             email = newProfile.email,
-            phone = newProfile.phone
+            phone = newProfile.phone,
         )
     }
 }
