@@ -1,5 +1,10 @@
 type Query {
     messages: [Message]
+    profiles: [Profile]
+}
+
+type Mutation {
+    createProfile(input: ProfileInput!): Profile!
 }
 
 type Message {
