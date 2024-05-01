@@ -6,3 +6,14 @@ type Message {
     id: String!
     text: String!
 }
+
+type Profile {
+    id: String!
+    firstName: String!
+    middleName: String
+    lastName: String!
+    gender: Int!
+    phone: String
+    email: String
+    photo: String
+}
