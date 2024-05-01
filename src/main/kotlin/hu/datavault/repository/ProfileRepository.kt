@@ -22,6 +22,19 @@ class ProfileRepository {
         )
     }
 
+    fun getProfile(id: String): Profile {
+        return Profile(
+            id = id,
+            firstName = "John",
+            middleName = null,
+            lastName = "Doe",
+            gender = 1,
+            phone = null,
+            email = null,
+            photo = null,
+        )
+    }
+
     fun createProfile(newProfile: Profile): Profile {
         return Profile(
             id = newProfile.id,

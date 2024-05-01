@@ -16,6 +16,11 @@ class ProfileController(private val profileService: ProfileService) {
         return profileService.getProfiles()
     }
 
+    @QueryMapping(name = "profile")
+    fun profile(@Argument id: String): Profile {
+        return profileService.getProfile(id)
+    }
+
     @MutationMapping(name = "createProfile")
     fun createProfile(@Argument input: ProfileInput): Profile {
         return profileService.createProfile(input)

@@ -1,6 +1,7 @@
 type Query {
     messages: [Message]
     profiles: [Profile]
+    profile(id: String!): Profile
 }
 
 type Mutation {

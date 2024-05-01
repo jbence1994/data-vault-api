@@ -13,6 +13,10 @@ class ProfileService(private val profileRepository: ProfileRepository) {
         return profileRepository.getProfiles()
     }
 
+    fun getProfile(id: String): Profile {
+        return profileRepository.getProfile(id)
+    }
+
     fun createProfile(profileInput: ProfileInput): Profile {
         return profileRepository.createProfile(profileInput.toProfile())
     }
