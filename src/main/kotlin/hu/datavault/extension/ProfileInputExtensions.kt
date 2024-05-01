@@ -11,7 +11,7 @@ fun ProfileInput.toProfile(): Profile {
         middleName = this.middleName,
         lastName = this.lastName,
         gender = this.gender,
-        birthDate = this.birthDate!!,
+        birthDate = this.birthDate,
         phone = this.phone,
         email = this.email,
         photo = this.photo,
