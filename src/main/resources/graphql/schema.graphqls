@@ -13,9 +13,11 @@ type Profile {
     middleName: String
     lastName: String!
     gender: Int!
+    birthDate: String
     phone: String
     email: String
     photo: String
+    createdDateTime: String
 }
 
 input ProfileInput {
@@ -23,6 +25,7 @@ input ProfileInput {
     middleName: String
     lastName: String!
     gender: Int!
+    birthDate: String
     phone: String
     email: String
     photo: String

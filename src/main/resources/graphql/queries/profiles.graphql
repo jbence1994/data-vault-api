@@ -5,8 +5,10 @@ query {
         middleName
         lastName
         gender
+        birthDate
         phone
         email
         photo
+        createdDateTime
     }
 }

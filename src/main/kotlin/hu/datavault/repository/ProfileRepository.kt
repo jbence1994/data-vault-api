@@ -2,6 +2,8 @@ package hu.datavault.repository
 
 import hu.datavault.model.Profile
 import org.springframework.stereotype.Repository
+import java.time.LocalDate
+import java.time.LocalDateTime
 import java.util.UUID
 
 @Repository
@@ -15,9 +17,11 @@ class ProfileRepository {
                 middleName = null,
                 lastName = "Doe",
                 gender = 1,
+                birthDate = LocalDate.of(1994, 3, 27).toString(),
                 phone = null,
                 email = null,
                 photo = null,
+                createdDateTime = LocalDateTime.now().toString(),
             ),
         )
     }
@@ -29,9 +33,11 @@ class ProfileRepository {
             middleName = null,
             lastName = "Doe",
             gender = 1,
+            birthDate = LocalDate.of(1994, 3, 27).toString(),
             phone = null,
             email = null,
             photo = null,
+            createdDateTime = LocalDateTime.now().toString(),
         )
     }
 
@@ -42,9 +48,11 @@ class ProfileRepository {
             middleName = newProfile.middleName,
             lastName = newProfile.lastName,
             gender = newProfile.gender,
+            birthDate = newProfile.birthDate,
             photo = newProfile.photo,
             email = newProfile.email,
             phone = newProfile.phone,
+            createdDateTime = newProfile.createdDateTime,
         )
     }
 }
