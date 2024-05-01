@@ -1,0 +1,8 @@
+type Query {
+    messages: [Message]
+}
+
+type Message {
+    id: String!
+    text: String!
+}
