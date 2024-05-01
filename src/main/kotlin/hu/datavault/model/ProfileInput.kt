@@ -8,5 +8,5 @@ data class ProfileInput(
     val phone: String?,
     val email: String?,
     val photo: String?,
-    val birthDate: String?
+    val birthDate: String?,
 )
