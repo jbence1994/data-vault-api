@@ -17,3 +17,13 @@ type Profile {
     email: String
     photo: String
 }
+
+input ProfileInput {
+    firstName: String!
+    middleName: String
+    lastName: String!
+    gender: Int!
+    phone: String
+    email: String
+    photo: String
+}
