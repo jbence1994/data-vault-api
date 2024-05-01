@@ -10,14 +10,22 @@ import org.springframework.stereotype.Service
 class ProfileService(private val profileRepository: ProfileRepository) {
 
     fun getProfiles(): List<Profile> {
-        return profileRepository.getProfiles()
+        return profileRepository.findAll()
     }
 
     fun getProfile(id: String): Profile {
-        return profileRepository.getProfile(id)
+        val profile = profileRepository.findById(id)
+
+        if (profile.isEmpty) {
+            throw Exception("Profile not found with id: #$id") // TODO: Add custom exception.
+        }
+
+        return profile.get()
     }
 
     fun createProfile(profileInput: ProfileInput): Profile {
-        return profileRepository.createProfile(profileInput.toProfile())
+        // TODO: Add validation.
+
+        return profileRepository.save(profileInput.toProfile())
     }
 }
