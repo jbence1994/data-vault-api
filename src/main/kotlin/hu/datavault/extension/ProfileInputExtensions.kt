@@ -2,6 +2,7 @@ package hu.datavault.extension
 
 import hu.datavault.model.Profile
 import hu.datavault.model.ProfileInput
+import java.time.LocalDateTime
 import java.util.UUID
 
 fun ProfileInput.toProfile(): Profile {
@@ -15,5 +16,6 @@ fun ProfileInput.toProfile(): Profile {
         phone = this.phone,
         email = this.email,
         photo = this.photo,
+        createdDateTime = LocalDateTime.now().toString(),
     )
 }
