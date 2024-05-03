@@ -22,6 +22,8 @@ data class Profile(
 
     var birthDate: String? = null,
 
+    var birthPlace: String? = null,
+
     var phone: String? = null,
 
     var email: String? = null,
