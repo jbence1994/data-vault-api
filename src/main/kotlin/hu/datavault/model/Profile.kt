@@ -28,5 +28,5 @@ data class Profile(
 
     var photo: String? = null,
 
-    var createdDateTime: String? = null,
+    var createdDateTime: String = "",
 )
