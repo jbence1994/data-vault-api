@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  database:
+    image: mysql
+    container_name: data_vault_database
+    restart: always
+    environment:
+      MYSQL_DATABASE: data_vault
+      MYSQL_ROOT_PASSWORD: 12345
+    volumes:
+      - database:/var/lib/mysql
+    networks:
+      - data_vault_network
+
+  backend:
+    build:
+      context: ./
+    container_name: data_vault_api
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    networks:
+      - data_vault_network
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: data_vault_phpmyadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      - PMA_HOST=database
+    depends_on:
+      - database
+    networks:
+      - data_vault_network
+
+networks:
+  data_vault_network:
+    driver: bridge
+
+volumes:
+  database:
+    name: data_vault_database
