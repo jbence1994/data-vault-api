@@ -5,6 +5,7 @@ query {
         middleName
         lastName
         gender
+        nationality
         birthDate
         birthPlace
         phone

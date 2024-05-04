@@ -13,6 +13,7 @@ type Profile {
     middleName: String
     lastName: String!
     gender: Int!
+    nationality: String!
     birthDate: String
     birthPlace: String
     phone: String
@@ -26,6 +27,7 @@ input ProfileInput {
     middleName: String
     lastName: String!
     gender: Int!
+    nationality: String!
     birthDate: String
     birthPlace: String
     phone: String
