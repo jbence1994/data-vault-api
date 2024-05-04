@@ -1,22 +1,19 @@
 package hu.datavault.extension
 
+import hu.datavault.constant.MiscellaneousConstants.NOT_AVAILABLE
 import hu.datavault.model.Profile
 import hu.datavault.model.ProfileInput
-import java.time.LocalDateTime
-import java.util.UUID
 
 fun ProfileInput.toProfile(): Profile {
     return Profile(
-        id = UUID.randomUUID().toString(),
         firstName = this.firstName,
-        middleName = this.middleName,
+        middleName = this.middleName ?: NOT_AVAILABLE,
         lastName = this.lastName,
         gender = this.gender,
-        birthDate = this.birthDate,
-        birthPlace = this.birthPlace,
-        phone = this.phone,
-        email = this.email,
-        photo = this.photo,
-        createdDateTime = LocalDateTime.now().toString(),
+        nationality = this.nationality ?: NOT_AVAILABLE,
+        birthDate = this.birthDate ?: NOT_AVAILABLE,
+        birthPlace = this.birthPlace ?: NOT_AVAILABLE,
+        phone = this.phone ?: NOT_AVAILABLE,
+        email = this.email ?: NOT_AVAILABLE,
     )
 }

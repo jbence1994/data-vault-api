@@ -4,17 +4,19 @@ import hu.datavault.constant.TableSchemaConstants.TABLE_NAME_PROFILES
 import jakarta.persistence.Entity
 import jakarta.persistence.Id
 import jakarta.persistence.Table
+import java.time.LocalDateTime
+import java.util.UUID
 
 @Entity
 @Table(name = TABLE_NAME_PROFILES)
 data class Profile(
 
     @Id
-    var id: String = "",
+    var id: String = UUID.randomUUID().toString(),
 
     var firstName: String = "",
 
-    var middleName: String? = null,
+    var middleName: String = "",
 
     var lastName: String = "",
 
@@ -22,15 +24,15 @@ data class Profile(
 
     var nationality: String = "",
 
-    var birthDate: String? = null,
+    var birthDate: String = "",
 
-    var birthPlace: String? = null,
+    var birthPlace: String = "",
 
-    var phone: String? = null,
+    var phone: String = "",
 
-    var email: String? = null,
+    var email: String = "",
 
     var photo: String? = null,
 
-    var createdDateTime: String = "",
+    var createdDateTime: String = LocalDateTime.now().toString(),
 )
