@@ -1,6 +1,6 @@
 mutation {
     createProfile(
-        input: {firstName: "", middleName: "", lastName: "", gender: 0, nationality: "", birthDate: "", birthPlace: "", phone: "", email: "", photo: ""}
+        input: {firstName: "", middleName: "", lastName: "", gender: 0, nationality: "", birthDate: "", birthPlace: "", phone: "", email: ""}
     ) {
         id
         firstName
