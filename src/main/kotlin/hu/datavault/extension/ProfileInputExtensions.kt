@@ -13,6 +13,7 @@ fun ProfileInput.toProfile(): Profile {
         lastName = this.lastName,
         gender = this.gender,
         birthDate = this.birthDate,
+        birthPlace = this.birthPlace,
         phone = this.phone,
         email = this.email,
         photo = this.photo,

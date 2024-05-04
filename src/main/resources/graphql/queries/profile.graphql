@@ -5,6 +5,8 @@ query {
         middleName
         lastName
         gender
+        birthDate
+        birthPlace
         phone
         email
         photo
