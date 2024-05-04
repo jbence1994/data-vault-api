@@ -20,6 +20,8 @@ data class Profile(
 
     var gender: Int = 0,
 
+    var nationality: String = "",
+
     var birthDate: String? = null,
 
     var birthPlace: String? = null,
