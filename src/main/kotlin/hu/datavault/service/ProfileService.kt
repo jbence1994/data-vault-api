@@ -1,5 +1,6 @@
 package hu.datavault.service
 
+import hu.datavault.exception.ProfileNotFoundException
 import hu.datavault.extension.toProfile
 import hu.datavault.model.Profile
 import hu.datavault.model.ProfileInput
@@ -17,7 +18,7 @@ class ProfileService(private val profileRepository: ProfileRepository) {
         val profile = profileRepository.findById(id)
 
         if (profile.isEmpty) {
-            throw Exception("Profile not found with id: #$id") // TODO: Add custom exception.
+            throw ProfileNotFoundException(id)
         }
 
         return profile.get()
@@ -27,5 +28,9 @@ class ProfileService(private val profileRepository: ProfileRepository) {
         // TODO: Add validation.
 
         return profileRepository.save(profileInput.toProfile())
+    }
+
+    fun updateProfile(profile: Profile): Profile {
+        return profileRepository.save(profile)
     }
 }
