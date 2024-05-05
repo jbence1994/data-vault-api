@@ -3,6 +3,8 @@ data-vault-api
 
 ### Personal data management application's backend.
 
+[![Continuous integration](https://github.com/jbence1994/data-vault-api/actions/workflows/build.yml/badge.svg)](https://github.com/jbence1994/data-vault-api/actions/workflows/build.yml)
+
 [Contributing Guide](.github/CONTRIBUTING.md)
 
 Prerequisites
