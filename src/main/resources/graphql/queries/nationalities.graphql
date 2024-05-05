@@ -1,0 +1,6 @@
+query {
+    nationalities {
+        countryName
+        alpha3Code
+    }
+}
