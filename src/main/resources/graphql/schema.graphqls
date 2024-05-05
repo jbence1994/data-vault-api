@@ -1,6 +1,7 @@
 type Query {
     profiles: [Profile]
     profile(id: String!): Profile
+    nationalities: [Nationality]
 }
 
 type Mutation {
@@ -32,4 +33,9 @@ input ProfileInput {
     birthPlace: String
     phone: String
     email: String
+}
+
+type Nationality {
+    countryName: String!
+    alpha3Code: String!
 }
