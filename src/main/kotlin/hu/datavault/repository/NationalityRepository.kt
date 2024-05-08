@@ -212,7 +212,6 @@ class NationalityRepository {
             Nationality(countryName = "Sint Maarten", alpha3Code = "SXM"),
             Nationality(countryName = "Slovakia", alpha3Code = "SVK"),
             Nationality(countryName = "Slovenia", alpha3Code = "SVN"),
-            Nationality(countryName = "Slovenia", alpha3Code = ""),
             Nationality(countryName = "Solomon Islands", alpha3Code = "SLB"),
             Nationality(countryName = "Somalia", alpha3Code = "SOM"),
             Nationality(countryName = "South Africa", alpha3Code = "ZAF"),
